@@ -1,0 +1,17 @@
+﻿@model MvcApplication1.Models.Operacion
+@{
+    ViewBag.Title = "Restar";
+}
+<h2>Sumar</h2>
+
+@using(@Html.BeginForm("SumarAction","Calculadora",FormMethod.Post)){
+
+    @Html.LabelFor(@model => @model.a, "Nro 1:")
+    @Html.TextBoxFor(model => model.a);
+    
+    @Html.LabelFor(@model => @model.b , "Nro 2:")
+    @Html.TextBoxFor(model => model.b);
+    
+    <button type="Submit">Operar</button>
+
+}

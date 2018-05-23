@@ -1,0 +1,48 @@
+﻿@model MvcApplication1.Models.Operacion
+@using MvcApplication1.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h2>Resultados</h2>
+    <div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Operacion</th>
+                    <th>Operando1</th>
+                    <th>Operador</th>
+                    <th>Operando2</th>
+                    <th>=</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Operacion x in ViewBag.operaciones) {
+                    <tr>
+                      <td>@x.pos</td>
+                      <td>@x.a</td>
+                      <td>@x.operador</td>
+                      <td>@x.b</td>
+                      <td>=</td>
+                      <td>@x.res</td>
+                  </tr>
+        
+                   }
+
+            </tbody>
+        </table>
+     
+    @Html.ActionLink("Pagina Principal","Bienvenido")
+    </div>
+</body>
+</html>
