@@ -1,70 +1,43 @@
 ﻿@model MvcApplication1.Models.Operacion
 @using MvcApplication1.Models
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div>
+    @{
+        int cont = 0;
+    }
 
-<!DOCTYPE html>
+    @foreach (Operacion x in ViewBag.operaciones)
+    {
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
+        if (cont == ViewBag.operaciones.Count - 1)
+        {
+            <tr class="negrita">
+                <td>@cont</td>
+                <td>@x.a</td>
+                <td>@x.operador</td>
+                <td>@x.b</td>
+                <td>=</td>
+                <td>@x.res</td>
+            </tr>
+        }
+        else
+        {
+            <tr>
+                <td>@cont</td>
+                <td>@x.a</td>
+                <td>@x.operador</td>
+                <td>@x.b</td>
+                <td>=</td>
+                <td>@x.res</td>
+            </tr>
+        }
+        cont += 1;
+    }
 
-    <link rel="stylesheet" href="~/Content/css/estilo.css" type="text/css">
-    <title></title>
-</head>
-<body>
-    <h2>Resultados</h2>
-    <div>
+    </tbody>
+    </table>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Operacion</th>
-                    <th>Operando1</th>
-                    <th>Operador</th>
-                    <th>Operando2</th>
-                    <th>=</th>
-                    <th>Resultado</th>
-                </tr>
-            </thead>
-            <tbody>
-                @{
-                    int cont = 0;
-                }
-
-                @foreach (Operacion x in ViewBag.operaciones)
-                {
-
-                    if (cont == ViewBag.operaciones.Count - 1)
-                    {
-                        <tr class="negrita">
-                            <td>@cont</td>
-                            <td>@x.a</td>
-                            <td>@x.operador</td>
-                            <td>@x.b</td>
-                            <td>=</td>
-                            <td>@x.res</td>
-                        </tr>
-                    }
-                    else
-                    {
-                        <tr>
-                            <td>@cont</td>
-                            <td>@x.a</td>
-                            <td>@x.operador</td>
-                            <td>@x.b</td>
-                            <td>=</td>
-                            <td>@x.res</td>
-                        </tr>
-                    }
-                    cont += 1;
-                }
-
-            </tbody>
-        </table>
-
-        @Html.ActionLink("Pagina principal", "Bienvenido", "Principal")
-    </div>
-</body>
-</html>
+    @Html.ActionLink("Pagina principal", "Bienvenido", "Principal")
+</div>

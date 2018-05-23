@@ -1,4 +1,41 @@
 ﻿.negrita{
 
     font-weight: bold;
+    color: red;
+}
+
+table {
+    text-align: center;
+
+}
+
+th{
+    background-color: lightgrey;
+}
+
+table,tr {
+    border: 1px solid black;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 10px;
+    float: right;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 3%;
+}
+
+input{
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+form{
+    clear:both;
+    border: 1px solid black;
+    width: 10%;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
 }
