@@ -30,20 +30,7 @@ namespace MvcApplication1.Services
 
         public void AgregarALista(Operacion o)
         {
-            if (operaciones.Count > 0)
-            {
-
-                o.pos = operaciones.Last().pos + 1;
-                operaciones.Add(o);
-
-            }
-            else {
-
-                o.pos = 0;
-
-                operaciones.Add(o);
-            
-            }
+            operaciones.Add(o);
         }
 
         public List<Operacion> Listar() {

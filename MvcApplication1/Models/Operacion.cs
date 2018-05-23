@@ -17,7 +17,6 @@ namespace MvcApplication1.Models
         public int b { get; set; }
         public int res { get; set; }
         public string operador { get; set; }
-        public int pos { get; set; }
 
     }
 }

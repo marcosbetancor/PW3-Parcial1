@@ -27,9 +27,13 @@
                 </tr>
             </thead>
             <tbody>
+                @{
+                    int cont = 0;
+                 }
+
                 @foreach (Operacion x in ViewBag.operaciones) {
                     <tr>
-                      <td>@x.pos</td>
+                      <td>@cont</td>
                       <td>@x.a</td>
                       <td>@x.operador</td>
                       <td>@x.b</td>
@@ -37,7 +41,8 @@
                       <td>@x.res</td>
                   </tr>
         
-                   }
+                  cont += 1;
+                }
 
             </tbody>
         </table>
