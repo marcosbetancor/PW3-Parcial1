@@ -28,8 +28,8 @@ namespace MvcApplication1.Controllers
 
             return View();
         }
-
-        [ActionName("SumarAction")]
+        
+        [HttpPost]
         public ActionResult Sumar(Operacion o)
         {
             if (!ModelState.IsValid)
@@ -51,7 +51,8 @@ namespace MvcApplication1.Controllers
         }
 
 
-        [ActionName("RestarAction")]
+
+        [HttpPost]
         public ActionResult Restar(Operacion o)
         {
             if (!ModelState.IsValid)

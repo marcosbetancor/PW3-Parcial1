@@ -4,13 +4,17 @@
 }
 <h2>Restar</h2>
 
-@using(@Html.BeginForm("RestarAction","Calculadora",FormMethod.Post)){
+@using (@Html.BeginForm("Restar", "Calculadora", FormMethod.Post))
+{
 
-    @Html.LabelFor(@model => @model.a, "Nro 1:")
-    @Html.TextBoxFor(@model => @model.a);
-    @Html.LabelFor(@model => @model.b , "Nro 2:")
+    @Html.LabelFor(model => model.a, "Nro 1:")
+    @Html.TextBoxFor(model => model.a);
+    @Html.ValidationMessageFor(model => @model.a);
+
+    @Html.LabelFor(model => model.b, "Nro 2:")
     @Html.TextBoxFor(model => model.b);
-    
+    @Html.ValidationMessageFor(model => model.b);
+
     <button type="Submit">Operar</button>
 
 }
